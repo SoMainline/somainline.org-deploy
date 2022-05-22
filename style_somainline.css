@@ -1,0 +1,457 @@
+/* Inter typeface
+ * SIL OFL 1.1 - http://scripts.sil.org/OFL
+ * Copyright (c) 2016-2020 The Inter Project Authors
+ * https://github.com/rsms/inter
+ * Version 3.13 - using western languages subset
+ * webfonts generated using https://www.fontsquirrel.com/tools/webfont-generator
+ */
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/type/inter-regular.woff') format('woff');
+}
+/*
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/type/inter-italic.woff') format('woff');
+}
+*/
+@font-face {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: normal;
+    src: url('/type/inter-semibold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/type/inter-bold.woff') format('woff');
+}
+
+/* Generic element styling */
+body {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #00293e;
+    font-family: "Inter", "Libre Franklin", "Dejavu Sans", "Roboto", sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    background: #fefefe;
+}
+a {
+    text-decoration: none;
+    color: #218ba2;
+}
+h1, h2, h3, h4, h5, h5 {
+    font-weight: 600;
+}
+h1 {
+    line-height: 1.2em;
+}
+h2 {
+    font-size: 1.8em;
+    line-height: 1.2em;
+}
+li {
+    margin: 0.3rem 0;
+}
+b, strong {
+    font-weight: 700;
+}
+code {
+    background: #edf5f7;
+    padding: 0.1em 0.16em;
+    color: #002942;
+}
+
+/* Navbar and header */
+header {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.8rem 0 0;
+    display: flex;
+    padding: 0.8rem 0 0;
+    font-size: 16px;
+}
+nav {
+    float: none;
+    display: inline-block;
+}
+nav a {
+    /* color: #00174f; */
+    /* Need to mute color a bit due to font weight of 600 */
+    color: #2b3e6d;
+    /* font-family: "Overpass", sans-serif; */
+    font-family: "Inter", sans-serif;
+    /* 500 would be nicer, but let's not pull in another weight of Inter just
+     * for this */
+    /* font-weight: 500; */
+    font-weight: 600;
+    letter-spacing: 0.073rem;
+    text-transform: uppercase;
+    line-height: 2.4rem;
+}
+nav a.selected {
+    border-bottom: 3px solid #077da2
+}
+.header-logo {
+    /* color: #00174f; */
+    font-weight: 600;
+    font-size: 1.66rem;
+    display: inline-block;
+    line-height: 2.4rem;
+}
+.header-logo a {
+    /* color: #00174f; */
+    line-height: 2rem;
+    padding: 0.6rem;
+    background: #00174f;
+    color: white;
+}
+.sitewide-logo {
+    /* background: #00262f; */
+    vertical-align: middle;
+}
+
+
+/* General media queries */
+@media (max-width:500px) {
+    header {
+        flex-flow: column nowrap;
+    }
+    .center-vs {
+        text-align: center;
+    }
+}
+@media (min-width:501px) {
+    header {
+        margin-bottom: 5rem;
+    }
+    .header-logo {
+        width: 44%;
+    }
+    nav {
+        width: 56%;
+    }
+}
+@media (max-width: 750px) {
+    nav a {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.4rem 0.2rem;
+    }
+    .header-logo {
+        margin-bottom: 0.4rem;
+    }
+    .header-logo a {
+        font-size: 1.4rem;
+    }
+    .sitewide-logo {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+    }
+    .item {
+        flex-basis: 100%;
+    }
+}
+@media (min-width: 751px) {
+    nav a {
+        font-size: 1.06rem;
+        padding: 0.4rem 0.6rem 0.2rem;
+    }
+    .container {
+        padding: 0 30px;
+    }
+    .header-logo {
+        margin-top: 0.6rem;
+    }
+    .header-logo a {
+        font-size: 1.8rem;
+    }
+    .sitewide-logo {
+        width: 45px;
+        object-fit: contain;
+        height: 45px;
+    }
+    .card {
+        flex-basis: 45%;
+        flex-grow: 0;
+    }
+    .item {
+        flex-basis: 30%;
+    }
+}
+
+/* Landing page */
+.landing-logo {
+    background: #2980B9;
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.74; */
+}
+.landing-logo-img {
+    object-fit: contain;
+    width: 180px;
+    height: auto;
+    max-width: 50%;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+
+/* Flex container for grid items, children */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.card {
+    /* flex-grow: 1; */
+    border-radius: 2px;
+    /* padding: 5px 20px; */
+    margin: 5px 20px;
+    background: #ffffff;
+}
+.card .headshot {
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    height: 150px;
+    width: 150px;
+    margin-top: 2rem;
+}
+.card h2 {
+    margin-bottom: 0.3em;
+}
+.card h4 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    /* color: #27446f; */
+    color: #077da2;
+}
+
+.item {
+    flex-grow: 0;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    /* padding: 0 0 1rem 0; */
+    padding: 5px;
+    margin: 0 5px 1rem;
+    border-radius: 3px;
+}
+.item h4 {
+    margin: 0.4em 0;
+    line-height: 2em;
+    flex-grow: 1;
+    text-align: center;
+}
+.item img {
+    height: 50px;
+    margin-right: 15px;
+}
+/* Tintings for project items at the bottom */
+.item { color: black; }
+.item.blue   { background-color: #00253fd4; color: #fbfdff; }
+.item.green  { background-color: #0d680dd4; color: #e5ffeb; }
+.item.orange { background-color: #f05a23;   color: #2d0a00 }
+.item.purple { background-color: #bca9c1d4; }
+.item.white  { background-color: #ecececd4; border: 2px solid #dbdbdb; padding: 3px; }
+
+/* Circular avatar previews on index page
+ * https://stackoverflow.com/questions/48916431/overlapping-overlaying-multiple-inline-images
+ */
+.avatars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  margin-bottom: 2rem;
+}
+.avatar {
+  position: relative;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  transition: .2s ease;
+}
+.avatar:not(:last-child) {
+  margin-left: -25px;
+}
+.avatars:hover .avatar:not(:last-child){
+  margin-left: -10px;
+}
+.avatar img {
+  width: 100%;
+  display: block;
+}
+.avatar-invite {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    font-weight: 600;
+    color: #0866ca;
+}
+
+
+/* Lipstick for elements */
+.button-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+.rounded-button {
+    display: inline-block;
+    background: #00ddc9;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 999px;
+    /* border-radius: 4px; */
+    font-size: 1.1em;
+    padding: 0.4em 0.9em;
+    margin: 0.4em 0.8em 0.4em 0;
+    background: linear-gradient(to right,#00c8dd,#009fdd);
+}
+.rounded-button:last-child {
+    margin-right: 0;
+}
+.emphasis-button {
+    background: linear-gradient(to right,#6f00dd,#dd007c);
+}
+.muted-button {
+    display: inline-block;
+    /* background: #00ddc9; */
+    /* Slightly too flashy */
+    /* background: #54fff0; */
+    background: #8ef4ff;
+    color: #052157;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    padding: 0.4em 0.9em;
+    /* margin: 0.4em 0.4em; */
+    margin: 0.4em 0.4em 0.4em 0;
+    /* background: linear-gradient(to right,#00c8dd,#009fdd); */
+}
+.muted-button:hover, .muted-button:focus {
+    background: #00a9dd;
+}
+
+/* Utility classes */
+@media (max-width: 750px) {
+    .hide-sm {
+        display: none;
+    }
+    .reading {
+        padding: 0 0.8em;
+    }
+    .fullwidth-sm {
+        /* width: 100%; */
+        max-width: 100%;
+    }
+    .justify-center-sm {
+        justify-content: center;
+    }
+    .h-spacer-sm {
+        height: 4em;
+        width: 100%;
+    }
+    .mar-top-sm {
+        margin-top: 4em;
+    }
+}
+@media (min-width: 751px) {
+    .half-med {
+        max-width: 50%;
+    }
+    .flex-half-med {
+        flex: 1 0 50%;
+    }
+    .flex-third-med {
+        flex: 1 0 33%;
+    }
+    .flex-twothirds-med {
+        flex: 1 0 67%;
+    }
+    .flex-med {
+        display: flex;
+    }
+    .flex-nogrow-med {
+        flex-grow: 0;
+    }
+    .h-spacer-med {
+        height: 4em;
+        width: 100%;
+    }
+    .mar-left-med {
+        margin-left: 2em;
+    }
+    .mar-right-med {
+        margin-right: 2em;
+    }
+    .space-evenly-med {
+        justify-content: space-evenly;
+    }
+    .justify-center-med {
+        justify-content: center;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #011714;
+        color: #e2f0f2;
+    }
+    b, strong {
+        color: #ffffff;
+    }
+    nav a {
+        color: #eefdff;
+    }
+    .item {
+        background: #011714;
+        color: #eefdff;
+    }
+    .item h3 {
+        color: #78aaf5;
+    }
+    a {
+        color: #27b0e6;
+    }
+    .card {
+        background: #011714;
+    }
+    .darkinvert {
+        filter: invert(1);
+    }
+}
+
+/* Temporary banner */
+.announcement-container {
+    align-items: center;
+    display: flex;
+    background-color:#20232a;
+    color:#fff;
+}
+.announcement {
+    flex: 1 1 auto;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 8px 30px;
+}
+.announcement a {
+    display: inline-block;
+    text-decoration: underline;
+    color: #00a1b2;
+}

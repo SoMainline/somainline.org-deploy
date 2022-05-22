@@ -1,0 +1,5 @@
+#for f in *_thumb.png; do echo ${f:r} && pngquant --speed 1 --strip --force --quality 0-80 $f -o ${f:r}_quant.png; done
+#jpegoptim -S 60% --strip-all sailfish-x-jolla_thumb.jpg
+
+for f in angelo jami konrad marijn martin oleg anon; do echo $f; convert -resize 50x team-$f.png team-${f}_thumb.jpeg; jpegoptim -m 90 -s team-${f}_thumb.jpeg; done
+for f in angelo jami konrad marijn martin oleg anon; do echo $f; convert -resize 150x team-$f.png team-${f}.jpeg; jpegoptim -m 90 -s team-${f}.jpeg; done
